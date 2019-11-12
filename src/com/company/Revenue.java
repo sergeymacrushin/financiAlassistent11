@@ -1,16 +1,17 @@
 package com.company;
 
 public class Revenue {
-    private double sumRub;
+    private int sumRub;
     private CategoryOfRevenue category;
 
-    public Revenue(double sumRub, CategoryOfRevenue category) {
+    public Revenue(int sumRub, CategoryOfRevenue category) {
         this.sumRub = sumRub;
         this.category = category;
 
     }
 
-    public double getSumRub() {
+    public int getSumRub() {
         return sumRub;
     }
 }
+
