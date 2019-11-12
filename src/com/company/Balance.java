@@ -16,7 +16,7 @@ public class Balance {
         {
             temp += revenues.get(i).getSumRub();
         }
-        for (int i=0 ; i < revenues.size(); i++)
+        for (int i=0 ; i < costs.size(); i++)
         {
             temp -= costs.get(i).getSumRub();
         }
