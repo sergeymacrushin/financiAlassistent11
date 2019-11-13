@@ -8,11 +8,6 @@ public class Balance {
         this.costs = costs;
         this.revenues = revenues;
     }
-    public Balance()
-    {
-        this.costs = new ArrayList<>(0);
-        this.revenues = new ArrayList<>(0);
-    }
 
     public int getBalance()
     {
@@ -21,7 +16,7 @@ public class Balance {
         {
             temp += revenues.get(i).getSumRub();
         }
-        for (int i=0 ; i < costs.size(); i++)
+        for (int i=0 ; i < revenues.size(); i++)
         {
             temp -= costs.get(i).getSumRub();
         }
@@ -31,12 +26,12 @@ public class Balance {
     public void addCost(Cost cost)
     {
         this.costs.add(cost);
-
+        this.getBalance();
     }
     public void addRevenue(Revenue revenue)
     {
         this.revenues.add(revenue);
-
+        this.getBalance();
     }
 
 }
