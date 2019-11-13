@@ -8,6 +8,11 @@ public class Balance {
         this.costs = costs;
         this.revenues = revenues;
     }
+    public Balance()
+    {
+        this.costs = new ArrayList<>(0);
+        this.revenues = new ArrayList<>(0);
+    }
 
     public int getBalance()
     {
