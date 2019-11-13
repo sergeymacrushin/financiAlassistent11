@@ -31,12 +31,9 @@ public class Balance {
     public void addCost(Cost cost)
     {
         this.costs.add(cost);
-        this.getBalance();
     }
     public void addRevenue(Revenue revenue)
     {
         this.revenues.add(revenue);
-        this.getBalance();
     }
-
 }
