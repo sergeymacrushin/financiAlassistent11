@@ -36,5 +36,4 @@ public class Balance {
     {
         this.revenues.add(revenue);
     }
-
 }
