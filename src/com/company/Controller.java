@@ -12,7 +12,7 @@ public class Controller {
         this.view.addCostListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               balance.addCost(new Cost(view.getReturnIntegerCost(), new CategoryOfCosts(view.getCategoryCost())));
+                    balance.addCost(new Cost(view.getReturnIntegerCost(), new CategoryOfCosts(view.getCategoryCost())));
             }
         });
         this.view.addRevenueListener(new ActionListener() {
@@ -24,11 +24,7 @@ public class Controller {
         this.view.addBalanceListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int costPrice, revenuePrice;
-                try
-                {
-                    balance.getBalance();
-                }
+                view.setBalanceResult(balance.getBalance());
             }
         });
     }

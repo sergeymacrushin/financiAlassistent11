@@ -3,7 +3,9 @@ import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
-        Frame Test = new AssistentView();
-        Test.setVisible(true);
+      AssistentView view = new AssistentView();
+      Balance balance = new Balance();
+      Controller controller = new Controller(balance,view);
+      view.setVisible(true);
     }
 }
