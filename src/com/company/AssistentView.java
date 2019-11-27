@@ -1,6 +1,5 @@
 package com.company;
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionListener;
 public class AssistentView extends JFrame {
     private JLabel cost = new JLabel("Enter the category of cost");
@@ -36,12 +35,44 @@ public class AssistentView extends JFrame {
         panel.add(BalanceResult);
         this.add(panel);
 }
-    public int getReturnIntegerCost(){ return Integer.parseInt(integerCost.getText());}
-    public int getReturnIntegerRevenue(){return Integer.parseInt(integerRevenue.getText());}
-    public int getReturnBalanceResult(){return Integer.parseInt(BalanceResult.getText());}
-    public void setBalanceResult(int balance){BalanceResult.setText(Integer.toString(balance));}
-    public void addCostListener(ActionListener listenerForAddCost){addCost.addActionListener(listenerForAddCost);}
-    public void addRevenueListener(ActionListener listenerForAddRevenue){addRevenue.addActionListener(listenerForAddRevenue);}
-    public void addBalanceListener(ActionListener listenerForBalance){returnBalance.addActionListener(listenerForBalance);}
-
+    public int getReturnIntegerCost()
+    {
+        return Integer.parseInt(integerCost.getText());
+    }
+    public String getCategoryCost()
+    {
+        return categoryCost.getText();
+    }
+    public int getReturnIntegerRevenue()
+    {
+        return Integer.parseInt(integerRevenue.getText());
+    }
+    public String getCategoryRevenue()
+    {
+        return categoryRevenue.getText();
+    }
+    public int getReturnBalanceResult()
+    {
+        return Integer.parseInt(BalanceResult.getText());
+    }
+    public void setBalanceResult(int balance)
+    {
+        BalanceResult.setText(Integer.toString(balance));
+    }
+    public void addCostListener(ActionListener listenerForAddCost)
+    {
+        addCost.addActionListener(listenerForAddCost);
+    }
+    public void addRevenueListener(ActionListener listenerForAddRevenue)
+    {
+        addRevenue.addActionListener(listenerForAddRevenue);
+    }
+    public void addBalanceListener(ActionListener listenerForBalance)
+    {
+        returnBalance.addActionListener(listenerForBalance);
+    }
+    public void displayErrorMessage(String errorMessage)
+    {
+        JOptionPane.showMessageDialog(this,errorMessage);
+    }
 }

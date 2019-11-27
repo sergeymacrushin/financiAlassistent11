@@ -1,6 +1,5 @@
 package com.company;
 
-import javax.swing.*;
 
 public class Cost {
     private int sumRub;
@@ -13,11 +12,4 @@ public class Cost {
         return sumRub;
     }
 
-    public static class Main {
-
-        public static void main(String[] args) {
-            JFrame Test = new AssistentView();
-            Test.setVisible(true);
-        }
-    }
 }
