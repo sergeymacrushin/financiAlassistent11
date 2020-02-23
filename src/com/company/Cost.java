@@ -11,5 +11,7 @@ public class Cost {
     public int getSumRub() {
         return sumRub;
     }
-
+    public CategoryOfCosts getCategory(){
+        return category;
+    }
 }

@@ -13,5 +13,8 @@ public class Revenue {
     public int getSumRub() {
         return sumRub;
     }
+    public CategoryOfRevenue getCategory(){
+        return category;
+    }
 }
 
