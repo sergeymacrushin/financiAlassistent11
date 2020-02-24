@@ -58,7 +58,7 @@ public class Balance {
     public void deleteCost(Cost cost){
         costs.remove(cost);
     }
-    public void deleteCost(Revenue revenue){
+    public void deleteRevenue(Revenue revenue){
         revenues.remove(revenue);
     }
 
@@ -93,4 +93,6 @@ public class Balance {
         }
         return sum;
     }
+
+
 }
