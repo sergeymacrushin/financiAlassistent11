@@ -1,8 +1,8 @@
 package com.company;
 import java.util.ArrayList;
 public class Balance {
-   private ArrayList<Cost> costs;
-   private ArrayList<Revenue> revenues;
+    private ArrayList<Cost> costs;
+    private ArrayList<Revenue> revenues;
 
     public Balance(ArrayList<Cost> costs, ArrayList<Revenue> revenues) {
         this.costs = costs;

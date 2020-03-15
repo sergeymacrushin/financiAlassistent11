@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.ArrayList;
 
+import static javax.swing.text.html.HTML.Tag.SELECT;
+
 public class Controller {
     private Balance balance;
     private AssistentView view;
@@ -76,7 +78,68 @@ public class Controller {
             costs.add(cost);
         }
         Balance balance = new Balance(costs, revenues);
+
         return balance;
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
