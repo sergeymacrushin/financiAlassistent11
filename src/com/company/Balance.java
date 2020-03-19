@@ -1,6 +1,9 @@
 package com.company;
+import java.io.*;
 import java.util.ArrayList;
-public class Balance {
+import java.util.Scanner;
+
+public class Balance implements Serializable {
     private ArrayList<Cost> costs;
     private ArrayList<Revenue> revenues;
 
@@ -93,6 +96,52 @@ public class Balance {
         }
         return sum;
     }
-
-
+    public static void save(Balance balance, String s) throws IOException
+    {
+        File file = new File(s);
+        file.createNewFile();
+        FileWriter out = new FileWriter(file);
+        out.write(new Integer(balance.revenues.size()).toString());
+        out.write("\r\n");
+        for(int i = 0; i < balance.revenues.size(); i++){
+            out.write(balance.revenues.get(i).toString());
+            out.write("\r\n");
+        }
+        out.write(new Integer(balance.costs.size()).toString());
+        out.write("\r\n");
+        for(int i = 0; i < balance.costs.size(); i++){
+            out.write(balance.costs.get(i).toString());
+            if(i!= balance.costs.size()-1)
+            {
+                out.write("\r\n");
+            }
+        }
+        out.flush();
+        out.close();
+    }
+    public static Balance load(String s)throws IOException{
+        FileReader in = new FileReader(s);
+        Scanner scan = new Scanner(in);
+        ArrayList<Revenue> revenues = new ArrayList<>();
+        ArrayList<Cost> costs = new ArrayList<>();
+        int size = 0;
+        try{
+            size = scan.nextInt();
+            while (size>0) {
+                Revenue tmp = Revenue.load(s,scan);
+                revenues.add(tmp);
+                size--;
+            }
+            size = scan.nextInt();
+            while (size>0) {
+                Cost tmp = Cost.load(s,scan);
+                costs.add(tmp);
+                size--;
+            }
+        } catch(Exception e) {
+            System.out.println("Некорректные данные");
+            System.exit(0);
+        }
+        return new Balance(costs, revenues);
+    }
 }
